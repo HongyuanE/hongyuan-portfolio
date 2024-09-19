@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Mail, Phone, MapPin, Instagram, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -79,7 +79,7 @@ const ContactPage = () => {
             <button className="absolute top-2 right-2 text-gray-600 hover:text-gray-800" onClick={() => setShowQRCode(false)}>
               <X size={24} />
             </button>
-            <img src="/assets/images/wechat-code.jpg" alt="WeChat QR Code" className="max-w-xs" />
+            <img src="./assets/images/wechat-code.jpg" alt="WeChat QR Code" className="max-w-xs" />
           </div>
         </div>
       )}

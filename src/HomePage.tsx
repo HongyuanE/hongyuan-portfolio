@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import useScrollToTop from './useScrollToTop';
 
@@ -33,7 +32,7 @@ const HomePage = () => {
             <Link to="/game-works" className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800">View My Work</Link>
           </div>
           <div className="md:w-1/2 flex justify-center">
-            <img src="/assets/images/hongyuan-portrait.jpg" alt="Hongyuan E Portrait" className="w-64 h-64 rounded-full object-cover" />
+            <img src="./assets/images/hongyuan-portrait.jpg" alt="Hongyuan E Portrait" className="w-64 h-64 rounded-full object-cover" />
           </div>
         </div>
       </section>
@@ -63,7 +62,7 @@ const HomePage = () => {
                 <span className="text-4xl">🎬</span>
               </div>
               <img 
-                src="/assets/images/film-works-preview.jpg" 
+                src="./assets/images/film-works-preview.jpg" 
                 alt="Film Works Preview" 
                 className="w-full h-72 object-cover"
               />
@@ -79,7 +78,7 @@ const HomePage = () => {
                 <span className="text-4xl">🎮</span>
               </div>
               <img 
-                src="/assets/images/game-works-preview.jpg" 
+                src="./assets/images/game-works-preview.jpg" 
                 alt="Game Works Preview" 
                 className="w-full h-72 object-cover"
               />

@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from 'react';
-import { PlayCircle, Calendar, Users, Map } from 'lucide-react';
+import { Calendar, Users, Map } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const GameWorksPage: React.FC = () => {
@@ -26,7 +26,7 @@ const GameWorksPage: React.FC = () => {
         <div className="w-screen min-h-screen pt-20 pb-12 px-4">
           <div className="fixed inset-0 z-0">
             <img 
-              src="/assets/images/space-smasher-wallpaper.jpg" 
+              src="./assets/images/space-smasher-wallpaper.jpg" 
               alt="Space Smasher Wallpaper" 
               className="w-full h-full object-cover"
             />
@@ -54,7 +54,7 @@ const GameWorksPage: React.FC = () => {
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="aspect-video">
                     <img 
-                      src={`/assets/videos/space-smasher-${i}.gif`} 
+                      src={`./assets/videos/space-smasher-${i}.gif`} 
                       alt={`Space Smasher Gameplay ${i}`} 
                       className="w-full h-full object-cover rounded"
                     />
@@ -97,14 +97,14 @@ const GameWorksPage: React.FC = () => {
         <div className="w-screen min-h-screen pt-20 pb-12 px-4"> {/* Added pt-20 for nav bar space */}
           <div className="fixed inset-0 z-0"> {/* Changed to fixed positioning */}
             <img 
-              src="/assets/images/la-ville-du-souvenir-wallpaper.jpg" 
+              src="./assets/images/la-ville-du-souvenir-wallpaper.jpg" 
               alt="La Ville Du Souvenir Wallpaper" 
               className="w-full h-full object-cover opacity-30"
             />
           </div>
           <div className="relative z-10 w-full max-w-[80vw] mx-auto">
             <img 
-              src="/assets/images/lvds-title.png" 
+              src="./assets/images/lvds-title.png" 
               alt="La Ville Du Souvenir Title" 
               className="mx-auto mb-8 max-w-3xl w-full"
             />
@@ -131,7 +131,7 @@ const GameWorksPage: React.FC = () => {
                     {[1, section.title === "Date Simulation" ? 4 : 2, 3].map((i) => (
                       <div key={i} className="aspect-video">
                         <img 
-                          src={`/assets/images/lvds-${section.title.toLowerCase().split(' ')[0]}-${i}.jpg`} 
+                          src={`./assets/images/lvds-${section.title.toLowerCase().split(' ')[0]}-${i}.jpg`} 
                           alt={`${section.title} Screenshot ${i}`} 
                           className="w-full h-full object-cover rounded"
                         />
@@ -156,7 +156,7 @@ const GameWorksPage: React.FC = () => {
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="aspect-video">
                     <img 
-                      src={`/assets/images/lvds-more-${i}.jpg`} 
+                      src={`./assets/images/lvds-more-${i}.jpg`} 
                       alt={`Further Screenshot ${i}`} 
                       className="w-full h-full object-cover rounded"
                     />
