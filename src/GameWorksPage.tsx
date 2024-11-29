@@ -171,27 +171,45 @@ const GameWorksPage: React.FC = () => {
     ourCafe: {
       title: "Our Café",
       content: () => (
-        <div className="bg-amber-100 text-gray-800 w-screen min-h-screen py-12 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-center">Our Café</h2>
-            <div className="bg-white p-8 rounded-lg shadow-md">
+        <div className="relative w-screen min-h-screen py-12 px-4">
+          {/* Background Image Container - Covers the full viewport */}
+          <div 
+            className="absolute inset-0 z-0" 
+            style={{
+              backgroundImage: "url('./assets/images/our-cafe-preview.jpg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              opacity: '0.5'
+            }}
+          />
+          
+          {/* Main Content Container - Sits above background */}
+          <div className="relative z-10 max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold mb-8 text-center text-gray-800">Our Café</h2>
+            <div className="bg-white bg-opacity-90 p-8 rounded-lg shadow-md">
               <p className="text-lg mb-4">
-                "Our Café" is a 3D simulation game currently in development, designed to feature semi-realistic customer interactions and an ever-present NPC employee who accompanies player throughout your journey. This game seeks to create an unparalleled interactive experience by blending semi-scripted content with LLM-driven dialogue, offering players a heartwarming and motivational second-life experience. It is especially crafted to help those with social difficulties build confidence in real-world communication. 
+                "Our Café" is a 3D simulation game currently in development, designed to feature semi-realistic customer interactions and an ever-present NPC employee who accompanies player throughout your journey. This game seeks to create an unparalleled interactive experience by blending semi-scripted content with LLM-driven dialogue, offering players a heartwarming and motivational second-life experience. It is especially crafted to help those with social difficulties build confidence in real-world communication.
               </p>
+              
               <p className="text-lg mb-4">
                 Players step into the shoes of a recent college graduate who starts working at a charming, yet unfamiliar, café in a bustling city. As they gradually get to know the owner and local regulars, players will manage orders, run the café, and assist customers with various life or psychological challenges, forging deep bonds in the process. Together with the café owner and newfound friends, players will tackle challenges inspired by real-life situations.
               </p>
-              <p className="text-lg font-semibold">
-                Key features (planned):
-              </p>
-              <ul className="list-disc list-inside mt-2">
-                <li>A refined yet accessible coffee-making process and business simulation</li>
-                <li>A cast of unique and friendly characters, each with their own personality</li>
-                <li>Realistic social interactions and meaningful conversations</li>
-                <li>Seasonal changes, holidays, and evolving customers that reflect the passage of time</li>
-                <li>Simple, yet valuable, psychological insights to aid in personal growth</li>
-              </ul>
-              <p className="mt-4 text-sm text-gray-600 italic">
+              
+              <div className="mt-8">
+                <p className="text-lg font-semibold mb-4">
+                  Key features (planned):
+                </p>
+                <ul className="list-disc list-inside space-y-2">
+                  <li>A refined yet accessible coffee-making process and business simulation</li>
+                  <li>A cast of unique and friendly characters, each with their own personality</li>
+                  <li>Realistic social interactions and meaningful conversations</li>
+                  <li>Seasonal changes, holidays, and evolving customers that reflect the passage of time</li>
+                  <li>Simple, yet valuable, psychological insights to aid in personal growth</li>
+                </ul>
+              </div>
+    
+              <p className="mt-6 text-sm text-gray-600 italic">
                 For more information please check dev logs at ........
               </p>
             </div>
