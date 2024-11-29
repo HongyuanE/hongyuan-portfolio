@@ -78,12 +78,12 @@ const GameWorksPage: React.FC = () => {
             </ul>
             <p className="text-xl text-white">This game is downloadable at:</p>
             <a 
-              href="https://github.com/harrye0505/Space_Smasher/releases/tag/V1.0" 
+              href="https://github.com/HongyuanE/SpaceSmasher" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-xl text-blue-300 hover:text-blue-100 underline"
             >
-              https://github.com/harrye0505/Space_Smasher/releases/tag/V1.0
+              https://github.com/HongyuanE/SpaceSmasher
             </a>
           </div>
         </div>
