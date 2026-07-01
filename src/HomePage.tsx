@@ -38,6 +38,18 @@ const HomePage = () => {
               GitHub
             </a>
           </div>
+          <p className="text-sm text-ink-muted mt-5">
+            <span className="inline-block w-2 h-2 rounded-full bg-live mr-2 align-middle" aria-hidden="true" />
+            New —{" "}
+            <a
+              href="https://hongyuane.github.io/ourcafe-guardrails/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-accent hover:underline"
+            >
+              an AI barista that survives your worst prompt-injection attempts →
+            </a>
+          </p>
         </div>
 
         <aside className="bg-surface border border-hair rounded-xl p-5">

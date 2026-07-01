@@ -42,6 +42,21 @@ export const projects: Project[] = [
     category: "cloud",
   },
   {
+    slug: "ourcafe-guardrails",
+    name: "OurCafe Guardrails",
+    status: "live",
+    tagline: "An AI barista you can try to jailbreak — and can't.",
+    description:
+      "A public 'try to break it' demo: a café NPC that stays in character through prompt injection, gaslighting, and off-menu manipulation. The system prompt and model are enforced server-side (a locked, cheap small model) — visitors can't see or change them. Live time-to-first-token and cost readouts make it reliability engineering applied to AI, not prompt-tinkering.",
+    tech: ["AWS Lambda", "FastAPI", "SSE streaming", "LLM guardrails", "TypeScript"],
+    links: [
+      { label: "Try to break it", href: "https://hongyuane.github.io/ourcafe-guardrails/" },
+      { label: "Backend", href: "https://github.com/HongyuanE/ourcafe-backend" },
+      { label: "Frontend", href: "https://github.com/HongyuanE/ourcafe-guardrails" },
+    ],
+    category: "cloud",
+  },
+  {
     slug: "spacesmasher",
     name: "SpaceSmasher",
     status: "shipped",
