@@ -4,7 +4,7 @@ import HomePage from './HomePage';
 import ProjectsPage from './ProjectsPage';
 import ExperiencePage from './ExperiencePage';
 import FilmWorksPage from './FilmWorksPage';
-import GameWorksPage from './GameWorksPage';
+import GameDevPage from './GameDevPage';
 import ContactPage from './ContactPage';
 import Navigation from './components/Navigation';
 
@@ -17,7 +17,7 @@ const App = () => {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/film-works" element={<FilmWorksPage />} />
-        <Route path="/game-works" element={<GameWorksPage />} />
+        <Route path="/game-dev" element={<GameDevPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
