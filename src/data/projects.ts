@@ -57,6 +57,21 @@ export const projects: Project[] = [
     category: "cloud",
   },
   {
+    slug: "agent-kanban-workflow",
+    name: "agent_kanban_workflow",
+    status: "shipped",
+    tagline: "A Claude Code plugin that keeps AI-assisted work on a Kanban board.",
+    description:
+      "A published, MIT-licensed Claude Code plugin: any repo gets a file-based Kanban board (folders are lanes, markdown is cards) plus an AI session-continuity loop that resumes cold across sessions. A deterministic, unit-tested Python reconciler drives the lane state machine — no LLM in the routing — and a capture skill turns every locked plan into cards for sign-off. Extracted and generalized from my own game's workflow, hardened through a multi-agent adversarial review, and cut to a v1.0.0 release. 43 passing tests, pure stdlib, no runtime dependencies.",
+    tech: ["Claude Code", "Python", "Git", "Jira API", "Plugin hooks"],
+    links: [
+      { label: "Repo", href: "https://github.com/HongyuanE/agent_kanban_workflow" },
+      { label: "v1.0.0 release", href: "https://github.com/HongyuanE/agent_kanban_workflow/releases/tag/v1.0.0" },
+      { label: "Tutorial", href: "https://github.com/HongyuanE/agent_kanban_workflow/blob/main/docs/TUTORIAL.md" },
+    ],
+    category: "cloud",
+  },
+  {
     slug: "spacesmasher",
     name: "SpaceSmasher",
     status: "shipped",
