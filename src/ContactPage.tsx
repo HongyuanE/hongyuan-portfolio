@@ -1,4 +1,4 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github } from "lucide-react";
 import useScrollToTop from "./useScrollToTop";
 
 interface Channel {
@@ -11,7 +11,6 @@ interface Channel {
 const channels: Channel[] = [
   { label: "Email", value: "hongyuane@gmail.com", href: "mailto:hongyuane@gmail.com", icon: Mail },
   { label: "GitHub", value: "github.com/HongyuanE", href: "https://github.com/HongyuanE", icon: Github },
-  { label: "LinkedIn", value: "Connect on LinkedIn", href: "https://www.linkedin.com/in/", icon: Linkedin },
 ];
 
 const ContactPage = () => {
