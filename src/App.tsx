@@ -5,7 +5,7 @@ import ExperiencePage from './ExperiencePage';
 import FilmWorksPage from './FilmWorksPage';
 import GameWorksPage from './GameWorksPage';
 import ContactPage from './ContactPage';
-import Navigation from './Navigation';
+import Navigation from './components/Navigation';
 
 const App = () => {
   return (
