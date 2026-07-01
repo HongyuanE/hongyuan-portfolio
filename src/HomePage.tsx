@@ -1,108 +1,93 @@
-import { Link } from 'react-router-dom';
-import useScrollToTop from './useScrollToTop';
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import useScrollToTop from "./useScrollToTop";
+import { stack, featuredProject } from "./data/projects";
+import TechBadges from "./components/TechBadges";
 
 const HomePage = () => {
   useScrollToTop();
 
   return (
-    <div className="font-sans bg-white text-black w-screen overflow-x-hidden" style={{fontFamily: 'Rajdhani, sans-serif'}}>
-      {/* Navigation */}
-      <nav className="bg-white shadow-md w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-3">
-            <Link to="/" className="text-xl font-bold">HONGYUAN E</Link>
-            <div className="hidden md:flex space-x-4">
-              <Link to="/" className="hover:text-gray-600">Home</Link>
-              <Link to="/experience" className="hover:text-gray-600">Experience</Link>
-              <Link to="/film-works" className="hover:text-gray-600">Film Works</Link>
-              <Link to="/game-works" className="hover:text-gray-600">Game Works</Link>
-              <Link to="/contact" className="hover:text-gray-600">Contact</Link>
-            </div>
-            <button className="md:hidden">Menu</button>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-8 md:mb-0">
-            <h2 className="text-5xl font-bold mb-4">HONGYUAN E</h2>
-            <p className="text-xl mb-6">Independent Game Developer and Producer crafting immersive experiences through various forms.</p>
-            <Link to="/game-works" className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800">View My Work</Link>
-          </div>
-          <div className="md:w-1/2 flex justify-center">
-            <img src="./assets/images/hongyuan-portrait.jpg" alt="Hongyuan E Portrait" className="w-64 h-64 rounded-full object-cover" />
-          </div>
-        </div>
-      </section>
-
-      {/* About Me Section */}
-      <section className="py-12 px-4 bg-gray-100">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-2xl font-semibold mb-4">About Me</h3>
-          <p className="mb-4">
-            Film and Theatre Studies graduate from McMaster University with passion for storytelling through various mediums. 
-            The exploration on more immersive storytelling led me from directing and screenwriting to the exciting world of game development.
+    <main className="max-w-5xl mx-auto px-6">
+      <section className="pt-16 pb-12 grid md:grid-cols-[1.6fr_1fr] gap-10 items-start">
+        <div>
+          <p className="font-mono text-sm text-accent mb-4">Cloud / DevOps engineer · Melbourne</p>
+          <h1 className="text-4xl md:text-5xl font-medium leading-tight mb-4">
+            I make infrastructure boring — in the good way.
+          </h1>
+          <p className="text-ink-muted text-lg mb-3">
+            Automated, observable, version-controlled. No 2&nbsp;a.m. surprises.
           </p>
-          <p>
-            With a blend of creative vision and technical skills, I bring unique narratives to life in both film and interactive experiences.
+          <p className="font-mono text-sm text-ink-faint border-l-2 border-accent pl-3 mb-8">
+            // yes, my degree is in film. long story — ask me about it.
           </p>
-        </div>
-      </section>
-
-      {/* Preview Sections */}
-      <section className="py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h3 className="text-2xl font-semibold mb-8">My Works</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Film Works Preview */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <div className="h-16 bg-gray-200 flex items-center justify-center">
-                <span className="text-4xl">🎬</span>
-              </div>
-              <img 
-                src="./assets/images/film-works-preview.jpg" 
-                alt="Film Works Preview" 
-                className="w-full h-72 object-cover"
-              />
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Film Works</h4>
-                <p className="mb-4">Explore my collection of film projects, from individual short films to feature-length productions.</p>
-                <Link to="/film-works" className="text-black font-semibold hover:underline">View Film Works</Link>
-              </div>
-            </div>
-            {/* Game Works Preview */}
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <div className="h-16 bg-gray-200 flex items-center justify-center">
-                <span className="text-4xl">🎮</span>
-              </div>
-              <img 
-                src="./assets/images/game-works-preview.jpg" 
-                alt="Game Works Preview" 
-                className="w-full h-72 object-cover"
-              />
-              <div className="p-6">
-                <h4 className="text-xl font-semibold mb-2">Game Works</h4>
-                <p className="mb-4">Discover my indie game projects, including completed games and works in progress.</p>
-                <Link to="/game-works" className="text-black font-semibold hover:underline">View Game Works</Link>
-              </div>
-            </div>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 bg-accent text-accent-ink font-medium text-sm px-5 py-2.5 rounded-md hover:opacity-90"
+            >
+              See what I&apos;ve shipped
+              <ArrowRight size={16} aria-hidden="true" />
+            </Link>
+            <a
+              href="https://github.com/HongyuanE"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center border border-hair text-ink text-sm px-5 py-2.5 rounded-md hover:border-ink-muted"
+            >
+              GitHub
+            </a>
           </div>
         </div>
+
+        <aside className="bg-surface border border-hair rounded-xl p-5">
+          <p className="text-xs uppercase tracking-wide text-ink-faint mb-3">Currently live</p>
+          <p className="flex items-center gap-2 text-ink font-medium mb-1">
+            <span className="w-2 h-2 rounded-full bg-live inline-block" aria-hidden="true" />
+            {featuredProject.name}
+          </p>
+          <p className="text-ink-muted text-sm mb-4 leading-relaxed">{featuredProject.tagline}</p>
+          <p className="font-mono text-xs text-ink-faint mb-4">
+            {featuredProject.tech.slice(0, 4).map((t) => t.toLowerCase()).join(" · ")}
+          </p>
+          <a
+            href={featuredProject.links[0].href}
+            target="_blank"
+            rel="noreferrer"
+            className="text-sm text-accent hover:underline"
+          >
+            {featuredProject.links[0].label} →
+          </a>
+        </aside>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-12 px-4 bg-gray-100">
-        <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-2xl font-semibold mb-4">Let's Connect</h3>
-          <p className="mb-6">Interested in collaboration or a coffee chat? Get in touch!</p>
-          <Link to="/contact" className="bg-black text-white px-6 py-2 rounded hover:bg-gray-800">
-            Contact Me
-          </Link>
-        </div>
+      <section className="py-10 border-t border-hair">
+        <p className="text-xs uppercase tracking-wide text-ink-faint mb-4">What I work with</p>
+        <TechBadges items={stack} />
       </section>
-    </div>
+
+      <section className="py-10 border-t border-hair">
+        <h2 className="text-2xl font-medium mb-4">What I do</h2>
+        <p className="text-ink-muted leading-relaxed max-w-2xl">
+          I&apos;m a Master of IT student going deep on cloud infrastructure, DevOps and site
+          reliability. I like turning manual, fragile processes into automated, observable,
+          version-controlled systems — and proving it with projects that actually run, not
+          buzzwords on a slide.
+        </p>
+      </section>
+
+      <section className="py-12 border-t border-hair text-center">
+        <h2 className="text-2xl font-medium mb-3">Let&apos;s talk</h2>
+        <p className="text-ink-muted mb-6">Grad roles, internships, or just infrastructure nerdery.</p>
+        <Link
+          to="/contact"
+          className="inline-flex items-center gap-2 bg-accent text-accent-ink font-medium text-sm px-5 py-2.5 rounded-md hover:opacity-90"
+        >
+          Get in touch
+          <ArrowRight size={16} aria-hidden="true" />
+        </Link>
+      </section>
+    </main>
   );
 };
 
