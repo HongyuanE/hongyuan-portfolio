@@ -26,7 +26,7 @@ const ProjectCard = ({ project, featured = false }: ProjectCardProps) => (
       <h3 className="text-xl font-medium text-ink m-0">{project.name}</h3>
       <span className="font-mono text-xs text-accent ml-1">{statusLabel[project.status]}</span>
     </div>
-    <p className="text-ink-muted text-sm mb-4">{project.tagline}</p>
+    <p className="text-ink text-sm font-medium mb-3">{project.tagline}</p>
     <p className="text-ink-muted text-sm leading-relaxed mb-4">{project.description}</p>
     <div className="mb-4">
       <TechBadges items={project.tech} />

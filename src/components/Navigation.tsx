@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { to: "/", label: "Home" },
-  { to: "/projects", label: "Projects" },
-  { to: "/game-dev", label: "Game dev" },
-  { to: "/experience", label: "Experience" },
-  { to: "/contact", label: "Contact" },
+  { to: "/", label: "Home", end: true },
+  { to: "/projects", label: "Projects", end: false },
+  { to: "/game-dev", label: "Game dev", end: false },
+  { to: "/experience", label: "Experience", end: false },
+  { to: "/contact", label: "Contact", end: false },
 ];
 
 const Navigation = () => {
@@ -21,9 +21,14 @@ const Navigation = () => {
         </Link>
         <div className="hidden md:flex gap-6 text-sm text-ink-muted">
           {links.map((l) => (
-            <Link key={l.to} to={l.to} className="hover:text-ink">
+            <NavLink
+              key={l.to}
+              to={l.to}
+              end={l.end}
+              className={({ isActive }) => isActive ? "text-accent" : "hover:text-ink"}
+            >
               {l.label}
-            </Link>
+            </NavLink>
           ))}
         </div>
         <button
