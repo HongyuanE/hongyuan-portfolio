@@ -1,97 +1,84 @@
+import useScrollToTop from "./useScrollToTop";
+
+interface TimelineItem {
+  period: string;
+  title: string;
+  detail: string;
+}
+
+const timeline: TimelineItem[] = [
+  {
+    period: "2025 – 2027",
+    title: "Master of IT — Monash University",
+    detail: "Focused on cloud infrastructure, DevOps and site reliability. Graduating 2027.",
+  },
+  {
+    period: "2025 – now",
+    title: "Cloud project — ourcafe-backend (live)",
+    detail:
+      "Designed and shipped a live serverless backend on AWS: API Gateway, Lambda, DynamoDB, all in Terraform, deployed by a secretless GitHub OIDC pipeline.",
+  },
+  {
+    period: "2023 – 2025",
+    title: "Game developer — Unity / C#",
+    detail:
+      "Built and released cross-platform games end-to-end. Learned to own systems from empty project to shipped release — the engineering habit I now apply to infrastructure.",
+  },
+  {
+    period: "2019 – 2023",
+    title: "BA, Theatre & Film Studies — McMaster University",
+    detail: "Where the storytelling and user-empathy come from. The one-line origin, not the focus.",
+  },
+];
+
+const skills: string[] = [
+  "AWS (Lambda, API Gateway, DynamoDB)",
+  "Terraform (IaC)",
+  "Docker",
+  "Kubernetes",
+  "CI/CD — GitHub Actions, OIDC",
+  "Python",
+  "Linux / Bash",
+  "Observability — Prometheus, Grafana",
+  "Systems & C# (game dev)",
+];
 
 const ExperiencePage = () => {
+  useScrollToTop();
+
   return (
-    <div className="font-sans bg-white text-black w-screen overflow-x-hidden" style={{fontFamily: 'Rajdhani, sans-serif'}}>
+    <main className="max-w-5xl mx-auto px-6 pt-16 pb-16">
+      <h1 className="text-4xl font-medium mb-10">Experience &amp; skills</h1>
 
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-4xl font-bold mb-12">Experience & Skills</h2>
-        
-        <div className="flex flex-col md:flex-row gap-12">
-          {/* Timeline Section */}
-          <div className="md:w-2/3">
-            <h3 className="text-2xl font-semibold mb-8">Professional Timeline</h3>
-            <div className="space-y-12">
-              {/* Timeline Item: Our Café */}
-              <div className="flex">
-                <div className="w-24 text-right mr-4">
-                  <span className="font-semibold">2024 - 2025</span>
-                </div>
-                <div className="flex-1 bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-semibold mb-2">Indie Game Developer</h4>
-                  <p>Developing "Our Café" (working title), an indie game for commercial purposes (Work in Progress)</p>
-                </div>
-              </div>
-              {/* Timeline Item: Le Ville Du Souvenir */}
-              <div className="flex">
-                <div className="w-24 text-right mr-4">
-                  <span className="font-semibold">2023 - 2024</span>
-                </div>
-                <div className="flex-1 bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-semibold mb-2">Individual Game Developer</h4>
-                  <p>Developed "Le Ville Du Souvenir", a game project focused on skill training and development</p>
-                </div>
-              </div>
-              {/* Timeline Item: Welcome to My Life */}
-              <div className="flex">
-                <div className="w-24 text-right mr-4">
-                  <span className="font-semibold">Jan - Jun 2023</span>
-                </div>
-                <div className="flex-1 bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-semibold mb-2">Project Management - "Welcome to My Life"</h4>
-                  <p>Responsible for department liaison, logistics, and props team management</p>
-                </div>
-              </div>
-              {/* Timeline Item: McMaster University */}
-              <div className="flex">
-                <div className="w-24 text-right mr-4">
-                  <span className="font-semibold">2019 - 2023</span>
-                </div>
-                <div className="flex-1 bg-white p-6 rounded-lg shadow-md">
-                  <h4 className="text-xl font-semibold mb-2">McMaster University</h4>
-                  <p>Major in Theatre and Film Studies</p>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="grid md:grid-cols-[2fr_1fr] gap-12">
+        <div>
+          <h2 className="text-2xl font-medium mb-8">Timeline</h2>
+          <ol className="list-none p-0 m-0 space-y-8">
+            {timeline.map((item) => (
+              <li key={item.title} className="border-l-2 border-hair pl-5">
+                <p className="font-mono text-xs text-accent mb-1">{item.period}</p>
+                <h3 className="text-lg font-medium text-ink mb-1">{item.title}</h3>
+                <p className="text-ink-muted text-sm leading-relaxed">{item.detail}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
 
-          {/* Skills Section */}
-          <div className="md:w-1/3">
-            <h3 className="text-2xl font-semibold mb-8">My Skills</h3>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <ul className="space-y-4">
-                <li>
-                  <span className="font-semibold">Python:</span> 5+ years
-                </li>
-                <li>
-                  <span className="font-semibold">Game Development:</span> 2+ years
-                </li>
-                <li>
-                  <span className="font-semibold">Music Composing:</span> 5+ years
-                </li>
-                <li>
-                  <span className="font-semibold">Scriptwriting</span>
-                </li>
-                <li>
-                  <span className="font-semibold">Stage Production</span>
-                </li>
-                <li>
-                  <span className="font-semibold">Film Production</span>
-                </li>
-                <li>
-                  <span className="font-semibold">Leadership and Project Management</span>
-                </li>
-                <li>
-                  <span className="font-semibold">Bilingual:</span> English and Mandarin
-                </li>
-                <li>
-                  <span className="font-semibold">Creativity</span>
-                </li>
-              </ul>
-            </div>
-          </div>
+        <div>
+          <h2 className="text-2xl font-medium mb-8">Skills</h2>
+          <ul className="list-none p-0 m-0 space-y-3">
+            {skills.map((s) => (
+              <li key={s} className="text-ink-muted text-sm border-b border-hair pb-2">
+                {s}
+              </li>
+            ))}
+          </ul>
+          <p className="text-ink-faint text-xs mt-6 font-mono">
+            // certs in progress: AWS CCP → SAA.
+          </p>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
